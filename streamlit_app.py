@@ -97,7 +97,7 @@ for i in range(30):
     simulated = actual_load * (1 + np.random.uniform(-0.05, 0.05))
     load_data.append(simulated)
 
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(6, 3))  # width, height in inches
     ax.plot(load_data)
     ax.set_title("Real-Time Load Variation")
     ax.set_ylabel("Load (N/m)")
@@ -113,7 +113,7 @@ for i in range(30):
 st.subheader("💰 Cost Comparison")
 
 if initial_design and updated_design:
-    fig2, ax2 = plt.subplots()
+    fig2, ax2 = plt.subplots(figsize=(6, 3))  # width, height in inches
     ax2.bar(["Initial", "Updated"], 
             [initial_design["cost"], updated_design["cost"]])
     ax2.set_ylabel("Cost (₹)")
@@ -129,7 +129,7 @@ st.subheader("📐 Beam Depth Comparison")
 
 if initial_design and updated_design:
 
-    fig3, ax3 = plt.subplots()
+    fig3, ax3 = plt.subplots(figsize=(6, 3))  # width, height in inches
 
     ax3.bar(["Initial Depth", "Updated Depth"],
             [initial_design["depth"], updated_design["depth"]])
@@ -147,7 +147,7 @@ st.subheader("🏗 Digital Twin Beam Representation")
 
 if updated_design:
 
-    fig4, ax4 = plt.subplots()
+    fig4, ax4 = plt.subplots(figsize=(6, 3))  # width, height in inches
 
     # Draw beam
     ax4.add_patch(plt.Rectangle((0, 0),
@@ -163,3 +163,4 @@ if updated_design:
     ax4.set_ylabel("Depth (m)")
 
     st.pyplot(fig4)
+
