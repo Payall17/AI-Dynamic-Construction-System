@@ -4,9 +4,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 
-st.set_page_config(page_title="AI Construction Command Center", layout="wide")
+st.set_page_config(page_title="Closed-Loop Generative Structural Intelligence System", layout="wide")
 
-st.title(" AI Dynamic Construction Command Center")
+st.title("Closed-Loop Generative Structural Intelligence System")
 st.markdown("Real-Time Generative Structural Recalibration & Digital Twin System")
 
 # -----------------------------
@@ -163,5 +163,6 @@ if updated_design:
     ax4.set_ylabel("Depth (m)")
 
     st.pyplot(fig4)
+
 
 
